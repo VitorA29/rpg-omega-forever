@@ -1,6 +1,0 @@
-package rpg.item;
-
-public class Upgradable extends Item
-{
-	private int refine;
-}

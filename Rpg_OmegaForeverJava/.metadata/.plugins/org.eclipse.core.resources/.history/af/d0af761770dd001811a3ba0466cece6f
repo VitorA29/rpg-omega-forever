@@ -1,6 +1,0 @@
-package rpg.item;
-
-public class Item {
-	private Rarity rarity;
-	private double dropRate;
-}
