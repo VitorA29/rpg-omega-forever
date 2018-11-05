@@ -1,0 +1,16 @@
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+package rpg.item;
+
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+public class Refinable extends Equipable
+{
+	public static int MAX_REFINE_LVL = 20;
+	private int refine;
+	private int bonusValue;
+}

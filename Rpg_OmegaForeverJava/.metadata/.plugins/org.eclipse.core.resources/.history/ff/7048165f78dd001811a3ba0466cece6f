@@ -1,0 +1,7 @@
+package rpg.item;
+
+public class Equipable extends Item
+{
+	private int baseValue;
+	private int level;
+}

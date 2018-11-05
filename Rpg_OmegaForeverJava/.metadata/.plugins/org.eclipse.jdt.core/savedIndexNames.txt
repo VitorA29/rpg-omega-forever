@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\vitor\Documents\GitHub\rpg-omega-forever\Rpg_OmegaForeverJava\.metadata\.plugins\org.eclipse.jdt.core
+223729181.index
+94253013.index
+3624757343.index
+902933034.index

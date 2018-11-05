@@ -1,0 +1,27 @@
+package rpg.item;
+
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+public class Item
+{
+	private Rarity rarity;
+	private double dropRate;
+
+	/**
+	 * @return the rarity
+	 */
+	public Rarity getRarity()
+	{
+		return rarity;
+	}
+
+	/**
+	 * @return the dropRate
+	 */
+	public double getDropRate()
+	{
+		return dropRate;
+	}
+}

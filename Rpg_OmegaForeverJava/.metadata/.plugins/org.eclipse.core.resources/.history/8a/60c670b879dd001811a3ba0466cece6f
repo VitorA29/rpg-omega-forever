@@ -1,0 +1,14 @@
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+package rpg.item;
+
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+public class Refinable extends Equipable
+{
+
+}

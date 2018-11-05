@@ -1,0 +1,22 @@
+package rpg.item;
+
+public enum Rarity
+{
+	COMMUM( 0, 70, 100 ), UNCOMMUM( 1, 60, 80 ), RARE( 2, 40, 60 ),
+	UNIQUE( 3, 10, 40 ), MITHICAL( 4, 0, 15 );
+	final int value;
+	final int minChance;
+	final int maxChance;
+
+	private Rarity( int value, int minChance, int maxChance )
+	{
+		this.value = value;
+		this.minChance = minChance;
+		this.maxChance = maxChance;
+	}
+
+	public int getValue()
+	{
+		return value;
+	}
+}

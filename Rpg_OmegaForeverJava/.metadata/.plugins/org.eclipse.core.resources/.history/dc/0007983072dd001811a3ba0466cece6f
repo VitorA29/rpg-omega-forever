@@ -1,0 +1,11 @@
+package rpg.item;
+
+public class Item {
+	final private Rarity rarity;
+	final private double dropRate;
+
+	public Rarity getRarity()
+	{
+		return rarity;
+	}
+}

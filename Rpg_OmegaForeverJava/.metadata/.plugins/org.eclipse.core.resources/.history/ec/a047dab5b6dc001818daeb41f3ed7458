@@ -1,0 +1,6 @@
+package rpg.item;
+
+public class Equipable extends Item
+{
+	private int refine;
+}

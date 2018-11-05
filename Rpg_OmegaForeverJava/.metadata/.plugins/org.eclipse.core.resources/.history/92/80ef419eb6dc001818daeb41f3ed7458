@@ -1,0 +1,6 @@
+package rpg.item;
+
+public class Upgradable extends Item
+{
+
+}

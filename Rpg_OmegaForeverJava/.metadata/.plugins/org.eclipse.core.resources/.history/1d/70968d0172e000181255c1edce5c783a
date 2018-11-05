@@ -1,0 +1,15 @@
+package rpg.item;
+
+import rpg.character.EquipamentSlot;
+
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+public class Equipable extends Item
+{
+	protected int value;
+	protected int level;
+	protected int durability;
+	private EquipamentSlot slot;
+}

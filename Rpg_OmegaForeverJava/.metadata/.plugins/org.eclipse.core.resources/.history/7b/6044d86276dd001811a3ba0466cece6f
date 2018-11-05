@@ -1,0 +1,10 @@
+package character;
+
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+public class EquipamentSlots
+{
+	
+}

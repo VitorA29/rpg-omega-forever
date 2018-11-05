@@ -1,0 +1,23 @@
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+package rpg.item;
+
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+public class Snippet
+{
+	/**
+	 * 
+	 * Date: %STABLE_DATE%
+	 * Version: %VERSION%
+	 */
+	public static void main( String[] args )
+	{
+		this.durability = durability;
+	}
+}
+

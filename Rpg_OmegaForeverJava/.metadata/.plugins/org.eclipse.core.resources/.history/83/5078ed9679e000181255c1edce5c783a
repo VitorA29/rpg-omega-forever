@@ -1,0 +1,16 @@
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+package rpg;
+
+import rpg.item.Refinable;
+
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+public class Teste
+{
+	Refinable ref;
+}

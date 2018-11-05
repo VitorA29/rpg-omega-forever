@@ -1,0 +1,26 @@
+package rpg.item;
+
+import rpg.character.EquipamentSlot;
+
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+public class Equipable extends Item
+{
+	private int value;
+	private int level;
+	private int durability;
+	private EquipamentSlot slot;
+	
+	/**
+	 * The getter for the level field.
+	 * @return the level.
+	 *         Date: %STABLE_DATE%
+	 *         Version: %VERSION%
+	 */
+	public int getLevel()
+	{
+		return level;
+	}
+}

@@ -1,0 +1,37 @@
+package rpg.item;
+
+import rpg.character.EquipamentSlot;
+
+/**
+ * Date: %STABLE_DATE%
+ * Version: %VERSION%
+ */
+public class Equipable extends Item
+{
+	private int value;
+	private int level;
+	private int durability;
+	private EquipamentSlot slot;
+	
+	/**
+	 * The getter for the level field.
+	 * @return the level.
+	 * Date: %STABLE_DATE%
+	 * Version: %VERSION%
+	 */
+	public int getLevel()
+	{
+		return level;
+	}
+
+	/**
+	 * The setter for the durability field.
+	 * @param durability the durability to set.
+	 * Date: %STABLE_DATE%
+	 * Version: %VERSION%
+	 */
+	public void setDurability( int durability )
+	{
+		this.durability = durability;
+	}
+}
