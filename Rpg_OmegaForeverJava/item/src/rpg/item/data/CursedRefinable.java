@@ -1,8 +1,8 @@
 package rpg.item.data;
 
 /**
- * Date: %STABLE_DATE%
- * Version: %VERSION%
+ * @since %STABLE_DATE%
+ * @version %VERSION%
  */
 public class CursedRefinable extends Refinable
 {

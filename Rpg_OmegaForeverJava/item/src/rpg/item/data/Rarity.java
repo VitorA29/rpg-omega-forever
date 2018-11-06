@@ -1,8 +1,8 @@
-package rpg.item;
+package rpg.item.data;
 
 /**
- * Date: %STABLE_DATE%
- * Version: %VERSION%
+ * @since %STABLE_DATE%
+ * @version %VERSION%
  */
 public enum Rarity
 {
@@ -17,8 +17,8 @@ public enum Rarity
 	 * @param value
 	 * @param minChance
 	 * @param maxChance
-	 * Date: %STABLE_DATE%
-	 * Version: %VERSION%
+	 * @since %STABLE_DATE%
+	 * @version %VERSION%
 	 */
 	private Rarity( int value, int minChance, int maxChance )
 	{
@@ -28,23 +28,23 @@ public enum Rarity
 	}
 
 	/**
-	 * 
-	 * @return
-	 * Date: %STABLE_DATE%
-	 * Version: %VERSION%
+	 * The getter for the value field.
+	 * @return the value.
+	 * @since %STABLE_DATE%
+	 * @version %VERSION%
 	 */
 	public int getValue()
 	{
 		return value;
 	}
+
 	/**
-	 * 
-	 * @param dropRate
-	 * @return
-	 * Date: %STABLE_DATE%
-	 * Version: %VERSION%
+	 * The getter for the drop chance.
+	 * @return the drop chance.
+	 * @since %STABLE_DATE%
+	 * @version %VERSION%
 	 */
-	public double getDropRate( double dropRate )
+	public double getDropChance( double dropRate )
 	{
 		return minChance + dropRate * ( maxChance - minChance );
 	}

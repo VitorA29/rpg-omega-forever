@@ -1,8 +1,8 @@
 package rpg.item.data;
 
 /**
- * Date: %STABLE_DATE%
- * Version: %VERSION%
+ * @since %STABLE_DATE%
+ * @version %VERSION%
  */
 public class Refinable extends Equipable
 {
@@ -19,8 +19,8 @@ public class Refinable extends Equipable
 	/**
 	 * The getter for the refine field.
 	 * @return the refine.
-	 * Date: %STABLE_DATE%
-	 * Version: %VERSION%
+	 * @since %STABLE_DATE%
+	 * @version %VERSION%
 	 */
 	public int getRefine()
 	{
@@ -28,8 +28,8 @@ public class Refinable extends Equipable
 	}
 
 	/**
-	 * Date: %STABLE_DATE%
-	 * Version: %VERSION%
+	 * @since %STABLE_DATE%
+	 * @version %VERSION%
 	 */
 	private boolean refine()
 	{

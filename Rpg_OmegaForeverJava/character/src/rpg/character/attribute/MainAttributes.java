@@ -1,8 +1,8 @@
 package rpg.character.attribute;
 
 /**
- * Date: %STABLE_DATE%
- * Version: %VERSION%
+ * @since %STABLE_DATE%
+ * @version %VERSION%
  */
 public enum MainAttributes
 {
@@ -12,8 +12,8 @@ public enum MainAttributes
 	
 	/**
 	 * The constructor for the MainAttributes.
-	 * Date: %STABLE_DATE%
-	 * Version: %VERSION%
+	 * @since %STABLE_DATE%
+	 * @version %VERSION%
 	 */
 	private MainAttributes(int value, String shortName)
 	{
@@ -24,8 +24,8 @@ public enum MainAttributes
 	/**
 	 * The getter for the shortName field.
 	 * @return the shortName.
-	 * Date: %STABLE_DATE%
-	 * Version: %VERSION%
+	 * @since %STABLE_DATE%
+	 * @version %VERSION%
 	 */
 	public String getShortName()
 	{

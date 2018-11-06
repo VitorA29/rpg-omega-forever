@@ -3,8 +3,8 @@ package rpg.item.data.enchantment;
 import rpg.character.attribute.MainAttributes;
 
 /**
- * Date: %STABLE_DATE%
- * Version: %VERSION%
+ * @since %STABLE_DATE%
+ * @version %VERSION%
  */
 public abstract class IEnchantment
 {
@@ -14,8 +14,8 @@ public abstract class IEnchantment
 	/**
 	 * The getter for the level field.
 	 * @return the level.
-	 * Date: %STABLE_DATE%
-	 * Version: %VERSION%
+	 * @since %STABLE_DATE%
+	 * @version %VERSION%
 	 */
 	public int getLevel()
 	{

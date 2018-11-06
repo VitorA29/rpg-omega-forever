@@ -1,8 +1,8 @@
 package rpg.character.attribute.main;
 
 /**
- * Date: %STABLE_DATE%
- * Version: %VERSION%
+ * @since %STABLE_DATE%
+ * @version %VERSION%
  */
 public interface IMainAttribute
 {

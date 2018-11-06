@@ -1,10 +1,8 @@
 package rpg.item.data;
 
-import rpg.item.Rarity;
-
 /**
- * Date: %STABLE_DATE%
- * Version: %VERSION%
+ * @since %STABLE_DATE%
+ * @version %VERSION%
  */
 public class Item
 {
@@ -13,8 +11,9 @@ public class Item
 
 	/**
 	 * The getter for the rarity field
-	 * 
 	 * @return the rarity
+	 * @since %STABLE_DATE%
+	 * @version %VERSION%
 	 */
 	public Rarity getRarity()
 	{
@@ -23,8 +22,9 @@ public class Item
 
 	/**
 	 * The getter for the dropRate field
-	 * 
 	 * @return the dropRate
+	 * @since %STABLE_DATE%
+	 * @version %VERSION%
 	 */
 	public double getDropRate()
 	{
