@@ -1,6 +1,6 @@
-package rpg.item.data.enchantment;
+package rpg.item.data.modification.enchantment;
 
-import rpg.character.attribute.MainAttributes;
+import rpg.character.attribute.MainAttribute;
 
 /**
  * @since %STABLE_DATE%
@@ -9,7 +9,7 @@ import rpg.character.attribute.MainAttributes;
 public abstract class IEnchantment
 {
 	private int level;
-	private MainAttributes attribute;
+	private MainAttribute attribute;
 	
 	/**
 	 * The getter for the level field.

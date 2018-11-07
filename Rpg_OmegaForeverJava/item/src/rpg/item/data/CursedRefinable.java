@@ -11,8 +11,7 @@ public class CursedRefinable extends Refinable
 	@Override
 	public int getItemValue()
 	{
-		return super.getItemValue()
-		    + ( getRefine() < MAX_REFINE_LEVEL_BONUS ? getRefine() * getRefine()
-		        : MAX_REFINE_LEVEL_BONUS * MAX_REFINE_LEVEL_BONUS );
+		return super.getItemValue() + ( getRefine() < MAX_REFINE_LEVEL_BONUS ? getRefine() * getRefine()
+		    : MAX_REFINE_LEVEL_BONUS * MAX_REFINE_LEVEL_BONUS );
 	}
 }

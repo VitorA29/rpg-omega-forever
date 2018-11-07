@@ -4,7 +4,7 @@ package rpg.character.attribute;
  * @since %STABLE_DATE%
  * @version %VERSION%
  */
-public enum MinorAttributes
+public enum MinorAttribute
 {
 	FISICAL_ATTACK( 0, "atk" ), MAGICAL_ATTACK( 1, "matk" ), FISICAL_DEFENSE( 2, "def" ), 
 	MAGICAL_DEFENSE( 3, "mdef" ), ACCURACY( 4, "hit" ), CRITICAL( 5, "crit" ), 
@@ -18,7 +18,7 @@ public enum MinorAttributes
 	 * @since %STABLE_DATE%
 	 * @version %VERSION%
 	 */
-	private MinorAttributes( int value, String shortName )
+	private MinorAttribute( int value, String shortName )
 	{
 		this.value = value;
 		this.shortName = shortName;

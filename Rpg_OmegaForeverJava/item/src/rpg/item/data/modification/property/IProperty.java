@@ -1,4 +1,4 @@
-package rpg.item.data.property;
+package rpg.item.data.modification.property;
 
 /**
  * @since %STABLE_DATE%

@@ -19,7 +19,6 @@ public class Refinable extends Equipable
 	/**
 	 * The getter for the refine field.
 	 * @return the refine.
-	 * @since %STABLE_DATE%
 	 * @version %VERSION%
 	 */
 	public int getRefine()
@@ -28,7 +27,7 @@ public class Refinable extends Equipable
 	}
 
 	/**
-	 * @since %STABLE_DATE%
+	 * Method for refine the equipment, for raise the Item Value.
 	 * @version %VERSION%
 	 */
 	private boolean refine()
@@ -42,8 +41,7 @@ public class Refinable extends Equipable
 					bonusValue += getValue() * ( 1 + ( getLevel() ) * 10 );
 				} else
 				{
-					bonusValue += getValue() * ( 1 + ( Math.random()
-					    * ( getLevel() + getRarity().getValue() ) ) * 10 );
+					bonusValue += getValue() * ( 1 + ( Math.random() * ( getLevel() + getRarity().getValue() ) ) * 10 );
 				}
 				return true;
 			} else
