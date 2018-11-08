@@ -4,8 +4,8 @@ import java.util.List;
 
 import rpg.character.EquipamentSlot;
 import rpg.item.data.modification.element.Element;
-import rpg.item.data.modification.enchantment.IEnchantment;
-import rpg.item.data.modification.property.IProperty;
+import rpg.item.data.modification.enchantment.Enchantment;
+import rpg.item.data.modification.property.Property;
 
 /**
  * @since %STABLE_DATE%
@@ -16,8 +16,8 @@ public class Equipable extends IItem
 	private int level;
 	private int durability;
 	private List<EquipamentSlot> slots;
-	private List<IEnchantment> enchatments;
-	private List<IProperty> properties;
+	private List<Enchantment> enchatments;
+	private List<Property> properties;
 	private Element element;
 	
 	/**
