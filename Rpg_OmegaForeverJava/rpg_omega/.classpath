@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/character"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/item"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/rpg"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,4 +1,4 @@
-package rpg.character.attribute;
+package rpg.character.attribute.main;
 
 /**
  * @since %STABLE_DATE%
@@ -6,18 +6,17 @@ package rpg.character.attribute;
  */
 public enum MainAttribute
 {
-	STRENGTH(0, "str"), AGILITY(1, "agi"), VITALITY(2, "vit"), INTELLIGENCE(3, "int"), DEXTERITY(4,"dex"), LUCK(5, "luk");
-	private int value;
-	private String shortName;
+	STRENGTH( "str" ), AGILITY( "agi" ), VITALITY( "vit" ), INTELLIGENCE( "int" ), DEXTERITY( "dex" ), LUCK( "luk" );
+
+	private final String shortName;
 	
 	/**
 	 * The constructor for the MainAttributes.
 	 * @since %STABLE_DATE%
 	 * @version %VERSION%
 	 */
-	private MainAttribute(int value, String shortName)
+	private MainAttribute( String shortName )
 	{
-		this.value = value;
 		this.shortName = shortName;
 	}
 	

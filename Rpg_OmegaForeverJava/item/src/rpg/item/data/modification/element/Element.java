@@ -6,15 +6,12 @@ package rpg.item.data.modification.element;
  */
 public enum Element
 {
-	NEUTRAL( 0, "neutral" ), FIRE( 1, "fire" ), WATER( 2, "water" ), WIND( 3, "wind" ), EARTH( 4, "earth" ),
-	LIGHTNING( 5, "lightning" );
+	NEUTRAL( "neutral" ), FIRE( "fire" ), WATER( "water" ), WIND( "wind" ), EARTH( "earth" ), LIGHTNING( "lightning" );
 
-	final private int value;
-	final private String name;
+	private final String name;
 
-	private Element( int value, String name )
+	private Element( String name )
 	{
-		this.value = value;
 		this.name = name;
 	}
 }

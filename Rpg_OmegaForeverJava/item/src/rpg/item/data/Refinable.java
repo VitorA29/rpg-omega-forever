@@ -30,7 +30,7 @@ public class Refinable extends Equipable
 	 * Method for refine the equipment, for raise the Item Value.
 	 * @version %VERSION%
 	 */
-	private boolean refine()
+	public boolean refine()
 	{
 		if ( refine < MAX_REFINE_VALUE )
 		{
@@ -41,7 +41,7 @@ public class Refinable extends Equipable
 					bonusValue += getValue() * ( 1 + ( getLevel() ) * 10 );
 				} else
 				{
-					bonusValue += getValue() * ( 1 + ( Math.random() * ( getLevel() + getRarity().getValue() ) ) * 10 );
+					bonusValue += getValue() * ( 1 + ( Math.random() * ( getLevel() + getRarity().ordinal() ) ) * 10 );
 				}
 				return true;
 			} else

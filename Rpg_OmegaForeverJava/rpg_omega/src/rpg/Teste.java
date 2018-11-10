@@ -4,7 +4,9 @@
  */
 package rpg;
 
-import rpg.item.data.Refinable;
+import rpg.item.data.modification.enchantment.Enchantment;
+import rpg.item.data.modification.enchantment.EnchantmentFactory;
+import rpg.item.data.modification.enchantment.IEnchantment;
 
 /**
  * Date: %STABLE_DATE%
@@ -12,5 +14,16 @@ import rpg.item.data.Refinable;
  */
 public class Teste
 {
-	Refinable ref;
+	public static void main( String[] args )
+	{
+		try
+		{
+			IEnchantment enchantment = EnchantmentFactory.getEnchantment( 2, Enchantment.SHARP.getEnchantmentClass() );
+			System.out.println( enchantment.getAlgo() );
+		} catch ( Exception e )
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

@@ -1,6 +1,6 @@
 package rpg.item.data.modification.enchantment;
 
-import rpg.character.attribute.MainAttribute;
+import rpg.character.attribute.main.MainAttribute;
 
 /**
  * @since %STABLE_DATE%
@@ -8,8 +8,14 @@ import rpg.character.attribute.MainAttribute;
  */
 public abstract class IEnchantment
 {
-	private int level;
-	private MainAttribute attribute;
+	private final int level;
+	private final MainAttribute attribute;
+
+	public IEnchantment( int level, MainAttribute attribute )
+	{
+		this.level = level;
+		this.attribute = attribute;
+	}
 	
 	/**
 	 * The getter for the level field.
@@ -21,4 +27,16 @@ public abstract class IEnchantment
 	{
 		return level;
 	}
+
+	/**
+	 * The getter for the attribute field.
+	 * @return The attribute.
+	 * @version %VERSION%
+	 */
+	public MainAttribute getAttribute()
+	{
+		return attribute;
+	}
+
+	public abstract String getAlgo();
 }

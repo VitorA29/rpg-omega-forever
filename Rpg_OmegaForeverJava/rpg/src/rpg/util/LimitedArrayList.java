@@ -1,4 +1,4 @@
-package rpg;
+package rpg.util;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -34,15 +34,31 @@ public class LimitedArrayList<E> extends ArrayList<E>
 	}
 
 	@Override
+	public void add( int index, E element )
+	{
+		if ( size() < capacity )
+		{
+			super.add( index, element );
+		}
+	}
+
+	@Override
 	public boolean addAll( Collection<? extends E> c )
 	{
-		for ( E e : c )
+		if ( size() + c.size() < capacity )
 		{
-			if ( !add( e ) )
-			{
-				return false;
-			}
+			return super.addAll( c );
 		}
-		return true;
+		return false;
+	}
+
+	@Override
+	public boolean addAll( int index, Collection<? extends E> c )
+	{
+		if ( size() + c.size() < capacity )
+		{
+			return super.addAll( index, c );
+		}
+		return false;
 	}
 }

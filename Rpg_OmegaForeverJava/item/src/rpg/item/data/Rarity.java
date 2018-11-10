@@ -6,33 +6,21 @@ package rpg.item.data;
  */
 public enum Rarity
 {
-	COMMUM( 0, 70, 100 ), UNCOMMUM( 1, 60, 80 ), RARE( 2, 40, 60 ), UNIQUE( 3, 10, 40 ), MITHICAL( 4, 0, 15 );
-	final int value;
-	final int minChance;
-	final int maxChance;
+	COMMUM( 70, 100 ), UNCOMMUM( 60, 80 ), RARE( 40, 60 ), UNIQUE( 10, 40 ), MITHICAL( 0, 15 );
+
+	private final int minChance;
+	private final int maxChance;
 
 	/**
 	 * The constructor for the Rarity
-	 * @param value
 	 * @param minChance
 	 * @param maxChance
 	 * @version %VERSION%
 	 */
-	private Rarity( int value, int minChance, int maxChance )
+	private Rarity( int minChance, int maxChance )
 	{
-		this.value = value;
 		this.minChance = minChance;
 		this.maxChance = maxChance;
-	}
-
-	/**
-	 * The getter for the value field.
-	 * @return the value.
-	 * @version %VERSION%
-	 */
-	public int getValue()
-	{
-		return value;
 	}
 
 	/**
