@@ -4,9 +4,13 @@
  */
 package rpg;
 
-import rpg.item.data.modification.enchantment.Enchantment;
-import rpg.item.data.modification.enchantment.EnchantmentFactory;
-import rpg.item.data.modification.enchantment.IEnchantment;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import rpg.item.data.entity.ItemDatabaseEntity;
 
 /**
  * Date: %STABLE_DATE%
@@ -14,16 +18,45 @@ import rpg.item.data.modification.enchantment.IEnchantment;
  */
 public class Teste
 {
+	private static SessionFactory factory;
 	public static void main( String[] args )
 	{
 		try
 		{
-			IEnchantment enchantment = EnchantmentFactory.getEnchantment( 2, Enchantment.SHARP.getEnchantmentClass() );
-			System.out.println( enchantment.getAlgo() );
-		} catch ( Exception e )
+			factory = new Configuration().configure().buildSessionFactory();
+		} catch ( Throwable ex )
 		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println( "Failed to create sessionFactory object." + ex );
+			throw new ExceptionInInitializerError( ex );
 		}
+		addItem( "teste-item" );
+		factory.close();
+	}
+
+	/* Method to CREATE an employee in the database */
+	public static String addItem( String name )
+	{
+		Session session = factory.openSession();
+		Transaction tx = null;
+		String itemID = null;
+
+		try
+		{
+			tx = session.beginTransaction();
+			ItemDatabaseEntity item = new ItemDatabaseEntity( name, 0, "", 0, 0, "", 0, 0, 0, "", 0, 0 );
+			itemID = (String) session.save( item );
+			tx.commit();
+		} catch ( HibernateException e )
+		{
+			if ( tx != null )
+			{
+				tx.rollback();
+			}
+			e.printStackTrace();
+		} finally
+		{
+			session.close();
+		}
+		return itemID;
 	}
 }

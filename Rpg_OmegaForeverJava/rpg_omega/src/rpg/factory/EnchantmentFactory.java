@@ -1,8 +1,9 @@
-package rpg.item.data.modification.enchantment;
+package rpg.factory;
 
 import java.lang.reflect.Constructor;
 
 import rpg.exception.FactoryException;
+import rpg.item.data.modification.enchantment.IEnchantment;
 
 /**
  * @since %STABLE_DATE%
@@ -10,14 +11,14 @@ import rpg.exception.FactoryException;
  */
 public class EnchantmentFactory
 {
-	private static final String className = "EnchantmentFactory";
+	private final String className;
 
-	private EnchantmentFactory()
+	protected EnchantmentFactory()
 	{
-		// blocking class instantiation
+		className = "EnchantmentFactory";
 	}
 
-	public static IEnchantment getEnchantment( int level, String enchantmentClass ) throws FactoryException
+	public IEnchantment getEnchantment( int level, String enchantmentClass ) throws FactoryException
 	{
 		Constructor<?> enchantmentContrutor;
 		try

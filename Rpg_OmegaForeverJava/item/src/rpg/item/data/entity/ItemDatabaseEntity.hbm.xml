@@ -1,0 +1,26 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "ItemDatabaseEntity" table = "rpg_item">
+      
+      <meta attribute = "class-description">This class contains the items details.</meta>
+      
+      <id name = "id" type = "int" column = "id"><generator class="native"/></id>
+      <property name = "name" column = "name" type = "string"/>
+      <property name = "value" column = "value" type = "int"/>
+      <property name = "rarity" column = "rarity" type = "string"/>
+      <property name = "dropRate" column = "drop_rate" type = "float"/>
+      <property name = "price" column = "price" type = "int"/>
+      <property name = "category" column = "category" type = "string"/>
+      <property name = "level" column = "level" type = "int"/>
+      <property name = "durability" column = "durability" type = "int"/>
+      <property name = "slots" column = "slots" type = "int"/>
+      <property name = "element" column = "element" type = "string"/>
+      <property name = "enchantment" column = "enchantment" type = "int"/>
+      <property name = "property" column = "property" type = "int"/>
+      
+   </class>
+</hibernate-mapping>

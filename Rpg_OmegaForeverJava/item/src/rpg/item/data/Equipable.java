@@ -11,15 +11,49 @@ import rpg.item.data.modification.property.Property;
  * @since %STABLE_DATE%
  * @version %VERSION%
  */
-public class Equipable extends IItem
+public class Equipable extends Item
 {
 	private int level;
+	private int durabilityBaseValue;
 	private int durability;
+	private Element element;
 	private List<EquipamentSlot> slots;
 	private List<Enchantment> enchatments;
 	private List<Property> properties;
-	private Element element;
 	
+	/**
+	 * The constructor for the Equipable.
+	 * @param id
+	 * @param name
+	 * @param value
+	 * @param rarity
+	 * @param dropRate
+	 * @param price
+	 * @param level
+	 * @param durabilityBaseValue
+	 * @param durability
+	 * @param element
+	 * @param slots
+	 * @param enchatments
+	 * @param properties
+	 * @version %VERSION%
+	 */
+	public Equipable(
+	    String id, String name, int value, Rarity rarity, float dropRate, int price, int level, int durabilityBaseValue,
+	    int durability, Element element, List<EquipamentSlot> slots, List<Enchantment> enchatments,
+	    List<Property> properties
+	)
+	{
+		super( id, name, value, rarity, dropRate, price );
+		this.level = level;
+		this.durability = durability;
+		this.durabilityBaseValue = durabilityBaseValue;
+		this.element = element;
+		this.slots = slots;
+		this.enchatments = enchatments;
+		this.properties = properties;
+	}
+
 	/**
 	 * The getter for the level field.
 	 * @return the level.
@@ -64,5 +98,14 @@ public class Equipable extends IItem
 		{
 			durability = -1;
 		}
+	}
+
+	/**
+	 * Restore the item durability to it's original value.
+	 * @version %VERSION%
+	 */
+	public void restore()
+	{
+		durability = durabilityBaseValue;
 	}
 }

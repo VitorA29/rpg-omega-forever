@@ -28,7 +28,7 @@ public enum Rarity
 	 * @return the drop chance.
 	 * @version %VERSION%
 	 */
-	public double getDropChance( double dropRate )
+	public float getDropChance( float dropRate )
 	{
 		return minChance + dropRate * ( maxChance - minChance );
 	}

@@ -4,14 +4,24 @@ package rpg.item.data;
  * @since %STABLE_DATE%
  * @version %VERSION%
  */
-public abstract class IItem
+public class Item
 {
-	private String id;
-	private String name;
-	private int value;
-	private Rarity rarity;
-	private double dropRate;
-	private int price;
+	private final String id;
+	private final String name;
+	private final int value;
+	private final Rarity rarity;
+	private final float dropRate;
+	private final int price;
+
+	public Item( String id, String name, int value, Rarity rarity, float dropRate, int price )
+	{
+		this.id = id;
+		this.name = name;
+		this.value = value;
+		this.rarity = rarity;
+		this.dropRate = dropRate;
+		this.price = price;
+	}
 
 	/**
 	 * The getter for the id field.
@@ -58,7 +68,7 @@ public abstract class IItem
 	 * @return the dropRate
 	 * @version %VERSION%
 	 */
-	public double getDropRate()
+	public float getDropRate()
 	{
 		return rarity.getDropChance( dropRate );
 	}

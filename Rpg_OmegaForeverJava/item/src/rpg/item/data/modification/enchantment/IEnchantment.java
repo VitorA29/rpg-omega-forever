@@ -37,6 +37,4 @@ public abstract class IEnchantment
 	{
 		return attribute;
 	}
-
-	public abstract String getAlgo();
 }

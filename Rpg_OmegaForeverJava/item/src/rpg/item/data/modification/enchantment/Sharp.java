@@ -8,7 +8,6 @@ import rpg.character.attribute.main.MainAttribute;
  */
 public class Sharp extends IEnchantment
 {
-
 	/**
 	 * The constructor for the Sharp.
 	 * @param level
@@ -19,10 +18,4 @@ public class Sharp extends IEnchantment
 	{
 		super( level, MainAttribute.LUCK );
 	}
-
-	public String getAlgo()
-	{
-		return "to em algo";
-	}
-
 }

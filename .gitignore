@@ -25,3 +25,6 @@ hs_err_pid*
 # Eclipse folders
 Rpg_OmegaForeverJava/.metadata
 Rpg_OmegaForeverJava/.recommenders
+
+# Maven Build
+Rpg_OmegaForeverJava/*/target
