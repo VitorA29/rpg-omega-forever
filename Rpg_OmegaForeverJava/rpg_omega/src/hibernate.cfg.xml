@@ -1,6 +1,5 @@
 <?xml version = "1.0" encoding = "utf-8"?>
-<!DOCTYPE hibernate-configuration SYSTEM 
-"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
    <session-factory>
    
@@ -11,6 +10,11 @@
       <property name = "hibernate.connection.username">root</property>
       <property name = "hibernate.connection.password">admin</property>
       
-      <mapping class="rpg.item.data.entity.ItemDatabaseEntity"/>
+      
+      <property name="hibernate.hbm2ddl.auto">validate</property>
+
+	<!-- Entity Mapping -->
+	<mapping class="rpg.factory.IdEntity"/>
+	<mapping class="rpg.item.data.entity.ItemDatabaseEntity" />
    </session-factory>
 </hibernate-configuration>

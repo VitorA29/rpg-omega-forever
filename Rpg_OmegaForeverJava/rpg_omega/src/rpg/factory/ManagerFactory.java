@@ -1,14 +1,23 @@
 package rpg.factory;
 
+import rpg.dao.IRpgEntity;
+
 /**
  * @since %STABLE_DATE%
  * @version %VERSION%
  */
 public class ManagerFactory
 {
-	private static final EnchantmentFactory enchantmetFactory = new EnchantmentFactory();
+	private static final EnchantmentFactory enchantmetFactory;
+	private static final ItemFactory itemFactory;
+	private static final DaoFactory daoFactory;
 
-	private static final ItemFactory itemFactory = new ItemFactory();
+	static
+	{
+		enchantmetFactory = new EnchantmentFactory();
+		itemFactory = new ItemFactory();
+		daoFactory = new DaoFactory();
+	}
 
 	private ManagerFactory()
 	{
@@ -23,5 +32,11 @@ public class ManagerFactory
 	public static ItemFactory getItemFactory()
 	{
 		return itemFactory;
+	}
+
+	public static DaoFactory getDaoFactory( Class<? extends IRpgEntity> entityClass )
+	{
+		daoFactory.prepareGenericDao( entityClass );
+		return daoFactory;
 	}
 }

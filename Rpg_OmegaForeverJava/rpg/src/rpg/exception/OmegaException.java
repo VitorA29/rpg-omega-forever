@@ -13,6 +13,7 @@ public abstract class OmegaException extends Exception
 	public OmegaException( String message, Throwable throwable )
 	{
 		super( message, throwable );
+		throwable.printStackTrace();
 		logger = null;
 	}
 }

@@ -4,12 +4,8 @@
  */
 package rpg;
 
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
-
+import rpg.factory.DaoFactory;
+import rpg.factory.ManagerFactory;
 import rpg.item.data.entity.ItemDatabaseEntity;
 
 /**
@@ -18,45 +14,29 @@ import rpg.item.data.entity.ItemDatabaseEntity;
  */
 public class Teste
 {
-	private static SessionFactory factory;
 	public static void main( String[] args )
 	{
+		DaoFactory daoFactory = ManagerFactory.getDaoFactory( ItemDatabaseEntity.class );
+		ItemDatabaseEntity item = new ItemDatabaseEntity(
+		    "teste-item", 0, "", 0F, 0, "", null, null, null, null, null, null
+		);
 		try
 		{
-			factory = new Configuration().configure().buildSessionFactory();
-		} catch ( Throwable ex )
+			daoFactory.beginFactory();
+			String itemId = daoFactory.create( item );
+			daoFactory.read();
+			item.setName( "outro" );
+			daoFactory.update( item );
+			daoFactory.read();
+			daoFactory.delete( itemId );
+			daoFactory.read();
+		} catch ( Exception e )
 		{
-			System.err.println( "Failed to create sessionFactory object." + ex );
-			throw new ExceptionInInitializerError( ex );
-		}
-		addItem( "teste-item" );
-		factory.close();
-	}
-
-	/* Method to CREATE an employee in the database */
-	public static String addItem( String name )
-	{
-		Session session = factory.openSession();
-		Transaction tx = null;
-		String itemID = null;
-
-		try
-		{
-			tx = session.beginTransaction();
-			ItemDatabaseEntity item = new ItemDatabaseEntity( name, 0, "", 0, 0, "", 0, 0, 0, "", 0, 0 );
-			itemID = (String) session.save( item );
-			tx.commit();
-		} catch ( HibernateException e )
-		{
-			if ( tx != null )
-			{
-				tx.rollback();
-			}
 			e.printStackTrace();
-		} finally
-		{
-			session.close();
 		}
-		return itemID;
+		finally
+		{
+			daoFactory.endFactory();
+		}
 	}
 }

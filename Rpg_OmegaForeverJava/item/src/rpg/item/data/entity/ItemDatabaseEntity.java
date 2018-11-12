@@ -2,9 +2,10 @@ package rpg.item.data.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import rpg.dao.IRpgEntity;
 
 /**
  * @since %STABLE_DATE%
@@ -12,40 +13,40 @@ import javax.persistence.Table;
  */
 @Entity
 @Table( name = "rpg_item" )
-public class ItemDatabaseEntity
+public class ItemDatabaseEntity implements IRpgEntity
 {
 	@Id
-	@GeneratedValue
+	@Column( updatable = false )
 	private String id;
 
 	// All item elements
 	@Column( nullable = false )
 	private String name;
 	@Column( nullable = true )
-	private int value;
+	private Integer value;
 	@Column( nullable = false )
 	private String rarity;
 	@Column( name = "drop_rate", nullable = false )
-	private float dropRate;
+	private Float dropRate;
 	@Column( nullable = false )
-	private int price;
+	private Integer price;
 
 	@Column( name = "category", nullable = false )
 	private String category;
 
 	// Equipment elements
 	@Column( nullable = true )
-	private int level;
+	private Integer level;
 	@Column( nullable = true )
-	private int durability;
+	private Integer durability;
 	@Column( nullable = true )
-	private int slots;
+	private Integer slots;
 	@Column( nullable = true )
 	private String element;
 	@Column( nullable = true )
-	private int enchantment;
+	private Integer enchantment;
 	@Column( nullable = true )
-	private int property;
+	private Integer property;
 
 	/**
 	 * The constructor for the ItemDatabaseEntity.
@@ -73,8 +74,8 @@ public class ItemDatabaseEntity
 	 * @version %VERSION%
 	 */
 	public ItemDatabaseEntity(
-	    String name, int value, String rarity, float dropRate, int price, String category, int level, int durability,
-	    int slots, String element, int enchantment, int property
+	    String name, Integer value, String rarity, Float dropRate, Integer price, String category,
+	    Integer level, Integer durability, Integer slots, String element, Integer enchantment, Integer property
 	)
 	{
 		super();
@@ -92,21 +93,13 @@ public class ItemDatabaseEntity
 		this.property = property;
 	}
 
-	/**
-	 * The getter for the id field.
-	 * @return The id.
-	 * @version %VERSION%
-	 */
+	@Override
 	public String getId()
 	{
 		return id;
 	}
 
-	/**
-	 * The setter for the id field.
-	 * @param id The id to set.
-	 * @version %VERSION%
-	 */
+	@Override
 	public void setId( String id )
 	{
 		this.id = id;
@@ -137,7 +130,7 @@ public class ItemDatabaseEntity
 	 * @return The value.
 	 * @version %VERSION%
 	 */
-	public int getValue()
+	public Integer getValue()
 	{
 		return value;
 	}
@@ -147,7 +140,7 @@ public class ItemDatabaseEntity
 	 * @param value The value to set.
 	 * @version %VERSION%
 	 */
-	public void setValue( int value )
+	public void setValue( Integer value )
 	{
 		this.value = value;
 	}
@@ -177,7 +170,7 @@ public class ItemDatabaseEntity
 	 * @return The dropRate.
 	 * @version %VERSION%
 	 */
-	public float getDropRate()
+	public Float getDropRate()
 	{
 		return dropRate;
 	}
@@ -187,7 +180,7 @@ public class ItemDatabaseEntity
 	 * @param dropRate The dropRate to set.
 	 * @version %VERSION%
 	 */
-	public void setDropRate( float dropRate )
+	public void setDropRate( Float dropRate )
 	{
 		this.dropRate = dropRate;
 	}
@@ -197,7 +190,7 @@ public class ItemDatabaseEntity
 	 * @return The price.
 	 * @version %VERSION%
 	 */
-	public int getPrice()
+	public Integer getPrice()
 	{
 		return price;
 	}
@@ -207,7 +200,7 @@ public class ItemDatabaseEntity
 	 * @param price The price to set.
 	 * @version %VERSION%
 	 */
-	public void setPrice( int price )
+	public void setPrice( Integer price )
 	{
 		this.price = price;
 	}
@@ -237,7 +230,7 @@ public class ItemDatabaseEntity
 	 * @return The level.
 	 * @version %VERSION%
 	 */
-	public int getLevel()
+	public Integer getLevel()
 	{
 		return level;
 	}
@@ -247,7 +240,7 @@ public class ItemDatabaseEntity
 	 * @param level The level to set.
 	 * @version %VERSION%
 	 */
-	public void setLevel( int level )
+	public void setLevel( Integer level )
 	{
 		this.level = level;
 	}
@@ -257,7 +250,7 @@ public class ItemDatabaseEntity
 	 * @return The durability.
 	 * @version %VERSION%
 	 */
-	public int getDurability()
+	public Integer getDurability()
 	{
 		return durability;
 	}
@@ -267,7 +260,7 @@ public class ItemDatabaseEntity
 	 * @param durability The durability to set.
 	 * @version %VERSION%
 	 */
-	public void setDurability( int durability )
+	public void setDurability( Integer durability )
 	{
 		this.durability = durability;
 	}
@@ -277,7 +270,7 @@ public class ItemDatabaseEntity
 	 * @return The slots.
 	 * @version %VERSION%
 	 */
-	public int getSlots()
+	public Integer getSlots()
 	{
 		return slots;
 	}
@@ -287,7 +280,7 @@ public class ItemDatabaseEntity
 	 * @param slots The slots to set.
 	 * @version %VERSION%
 	 */
-	public void setSlots( int slots )
+	public void setSlots( Integer slots )
 	{
 		this.slots = slots;
 	}
@@ -317,7 +310,7 @@ public class ItemDatabaseEntity
 	 * @return The enchantment.
 	 * @version %VERSION%
 	 */
-	public int getEnchantment()
+	public Integer getEnchantment()
 	{
 		return enchantment;
 	}
@@ -327,7 +320,7 @@ public class ItemDatabaseEntity
 	 * @param enchantment The enchantment to set.
 	 * @version %VERSION%
 	 */
-	public void setEnchantment( int enchantment )
+	public void setEnchantment( Integer enchantment )
 	{
 		this.enchantment = enchantment;
 	}
@@ -337,7 +330,7 @@ public class ItemDatabaseEntity
 	 * @return The property.
 	 * @version %VERSION%
 	 */
-	public int getProperty()
+	public Integer getProperty()
 	{
 		return property;
 	}
@@ -347,7 +340,7 @@ public class ItemDatabaseEntity
 	 * @param property The property to set.
 	 * @version %VERSION%
 	 */
-	public void setProperty( int property )
+	public void setProperty( Integer property )
 	{
 		this.property = property;
 	}
